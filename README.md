@@ -19,22 +19,64 @@ This project aims to provide an automated backup strategy for RDS instances usin
 
 ## Usage
 
-1. Clone the repository to your local machine: `git clone <repository_url>`
-2. Change into the project directory: `cd <project_directory>`
-3. Initialize the Terraform project: `terraform init`
-4. Customize the Terraform script `main.tf` to specify the desired RDS instance settings, backup window, and retention period.
-5. Validate the Terraform configuration: `terraform validate`
-6. Plan the changes to be applied: `terraform plan`
-7. Apply the changes to provision the RDS instance with automated backups: `terraform apply`
-8. To restore an RDS instance from a backup, modify the restoration script `restore_instance.tf` with the appropriate snapshot identifier.
-9. Validate the restoration script: `terraform validate -var="snapshot_identifier=<snapshot_identifier>"`
-10. Apply the changes using the restoration script to restore the RDS instance: `terraform apply -var="snapshot_identifier=<snapshot_identifier>"`
+1. Clone the repository to your local machine: 
+```
+git clone <repository_url>
+```
+3. Change into the project directory: 
+```
+cd <project_directory>
+````
+3. Initialize the Terraform project: 
+ ```
+terraform init
+```
+5. Customize the Terraform script `main.tf` to specify the desired RDS instance settings, backup window, and retention period.
+6. Validate the Terraform configuration: 
+```
+terraform validate
+```
+8. Plan the changes to be applied: 
+```
+terraform plan
+```
+9. Apply the changes to provision the RDS instance with automated backups: 
+```
+terraform apply
+```
+10. To restore an RDS instance from a backup, modify the restoration script `restore_instance.tf` with the appropriate snapshot identifier.
+11. Validate the restoration script: 
+```
+terraform validate -var="snapshot_identifier=<snapshot_identifier>"
+```
 
+12. Apply the changes using the restoration script to restore the RDS instance: 
+```
+terraform apply -var="snapshot_identifier=<snapshot_identifier>"
+```
 Note: Replace `<repository_url>` with the actual URL of the repository and `<project_directory>` with the name of the project directory. Also, replace `<snapshot_identifier>` with the identifier of the DB snapshot you want to restore from.
 
 ## Clean-up
 
-To clean up the resources created by the Terraform scripts, run the following command:
+To clean up the resources created by the Terraform scripts, follow the steps below:
+
+1. Open a terminal or command prompt.
+
+2. Change into the project directory where the Terraform scripts are located.
+
+3. Run the following command to destroy the provisioned resources:
+```
+terraform destroy
+```
+
+This command will prompt you to confirm the destruction of the resources. Type `yes` and press Enter to proceed.
+
+4. Wait for Terraform to complete the destruction process. Once finished, all the resources provisioned by the Terraform scripts will be removed from your AWS account.
+
+Note: Be cautious when running the `terraform destroy` command, as it will permanently delete the resources associated with the project. Make sure to review the resources that will be destroyed before confirming the action.
+
+It is important to clean up the resources to avoid any unnecessary costs or resource waste in your AWS account. Performing clean-up after completing the assessment demonstrates good practice and responsibility in managing cloud resources.
+
 
 
 ## Challenges Faced and Solutions
@@ -54,11 +96,6 @@ To clean up the resources created by the Terraform scripts, run the following co
    **Solution**
 
    To address this challenge, I reached out to the AWS Support team for assistance. They provided me with detailed documentation on recreating the default subnet, allowing me to proceed with the required steps for the assessment. By following their guidance, I was able to recreate the default subnet and continue with the assessment without any further obstacles.
-
-
-
-
-This command will destroy the provisioned RDS instance and any associated resources.
 
 ## Troubleshooting
 
