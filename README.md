@@ -101,9 +101,28 @@ It is important to clean up the resources to avoid any unnecessary costs or reso
 
 If you encounter any issues or errors during the execution of the Terraform scripts, refer to the Terraform documentation or consult the project's troubleshooting guide for common solutions.
 
+## References
+
+Here are some helpful references for further reading:
+
+1. [AWS Account Sign-up](https://aws.amazon.com/free/): Sign up for an AWS account if you don't have one.
+
+2. [Getting Started with Terraform](https://learn.hashicorp.com/tutorials/terraform/aws-build?in=terraform/aws-get-started): Guide to installing and setting up Terraform for your first project.
+
+3. [Creating an IAM User in AWS](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users_create.html): AWS documentation on how to create an IAM user in your AWS account.
+
+4. [AWS RDS Provisioning](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Welcome.html): AWS documentation on provisioning RDS resources.
+
+5. [Terraform AWS Instance Resource](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/instance): Documentation for the Terraform AWS instance resource, which allows you to create EC2 instances.
+
+6. [Installing and Configuring AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html): AWS documentation on installing and configuring the AWS CLI for managing your AWS resources.
+
+Feel free to explore these resources to enhance your understanding of AWS, Terraform, IAM user creation, RDS provisioning, creating EC2 instances with Terraform, and installing/configuring AWS CLI.
+
 ## Contributing
 
 Contributions are welcome! If you find any issues or have suggestions for improvement, please open an issue or submit a pull request.
+
 
 ## License
 
