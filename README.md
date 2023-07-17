@@ -44,15 +44,15 @@ terraform plan
 ```
 terraform apply
 ```
-10. To restore an RDS instance from a backup, modify the restoration script `restore_instance.tf` with the appropriate snapshot identifier.
+10. To restore an RDS instance from a backup, modify the restoration script `restore-snapshot/restore_instance.tf` with the appropriate snapshot identifier.
 11. Validate the restoration script: 
 ```
-terraform validate -var="snapshot_identifier=<snapshot_identifier>"
+terraform validate 
 ```
 
 12. Apply the changes using the restoration script to restore the RDS instance: 
 ```
-terraform apply -var="snapshot_identifier=<snapshot_identifier>"
+terraform apply 
 ```
 Note: Replace `<repository_url>` with the actual URL of the repository and `<project_directory>` with the name of the project directory. Also, replace `<snapshot_identifier>` with the identifier of the DB snapshot you want to restore from.
 
